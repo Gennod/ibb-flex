@@ -1,0 +1,30 @@
+@import 'tailwindcss';
+
+@theme {
+	--color-primary: #7a49fe !important;
+	--color-secondary: #f6cc1a !important;
+	--default-transition-duration: 0.3s;
+	--default-transition-timing-function: ease;
+}
+
+:root {
+	--background: #0c2635;
+	--foreground: #fff;
+}
+
+html,
+body {
+	@apply h-full;
+}
+
+body {
+	@apply relative;
+	color: var(--foreground);
+	background: var(--background);
+	font-family: var(--font-montserrat), sans-serif;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(6, minmax(0, 1fr));
+}
