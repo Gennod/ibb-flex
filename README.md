@@ -1,36 +1,111 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# IBB "Flex"
 
-## Getting Started
+Данный проект представляет собой приложение с анимациями, созданными с помощью framer motion
 
-First, run the development server:
+## Функционал
+- Прокрутка фильмов
+- Переход на страничку фильма
+
+## Технологии
+- ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
+- ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+- ![Zustand](https://img.shields.io/badge/Zustand-blue?style=for-the-badge)
+- ![Lucide React](https://img.shields.io/badge/Lucide_React-F56565?style=for-the-badge)
+- ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+- ![Framer Motion](https://img.shields.io/badge/Motion-EF2D5E?style=for-the-badge&logo=framer&logoColor=white)
+- ![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white)
+- ![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7)
+
+## Установка и запуск
+
+1. Клонируйте репозиторий:
+
+```bash
+git clone https://github.com/Gennod/ibb-flex.git
+```
+
+2. Установите зависимости:
+
+```bash
+npm install
+```
+
+3. Запустите приложение:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Демо
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Посмотреть работающее приложение можно здесь:
+[IBB-FLEX](https://ibb-flex.netlify.app/)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Структура проекта
 
-## Learn More
+```
 
-To learn more about Next.js, take a look at the following resources:
+    ├── profile-img.jpg
+    ├── vercel.svg
+    ├── video.mp4
+    └── window.svg
+├── src
+    ├── app
+    │   ├── Home.tsx
+    │   ├── Providers.tsx
+    │   ├── carousel
+    │   │   ├── Carousel.tsx
+    │   │   ├── CarouselItem.tsx
+    │   │   ├── CarouselItemDetails.tsx
+    │   │   ├── animations
+    │   │   │   └── carousel-item.animation.ts
+    │   │   └── hooks
+    │   │   │   ├── useCarousel.ts
+    │   │   │   └── useCarouselItemAngle.ts
+    │   ├── favicon.ico
+    │   ├── filters
+    │   │   ├── Filters.tsx
+    │   │   └── filters.data.ts
+    │   ├── globals.css
+    │   ├── layout.tsx
+    │   ├── media
+    │   │   └── [slug]
+    │   │   │   ├── MediaDetails.tsx
+    │   │   │   ├── animation.ts
+    │   │   │   ├── details
+    │   │   │       └── MediaPage.tsx
+    │   │   │   ├── episodes
+    │   │   │       ├── EpisodeItem.tsx
+    │   │   │       └── Episodes.tsx
+    │   │   │   ├── page.tsx
+    │   │   │   ├── products
+    │   │   │       ├── Products.tsx
+    │   │   │       └── product.animation.ts
+    │   │   │   ├── useMediaBackdrop.ts
+    │   │   │   └── video-player
+    │   │   │       └── VideoPlayer.tsx
+    │   └── page.tsx
+    ├── components
+    │   └── main-wrapper
+    │   │   ├── MainWrapper.tsx
+    │   │   └── header
+    │   │       ├── Header.tsx
+    │   │       ├── Menu.tsx
+    │   │       └── menu.data.ts
+    ├── config
+    │   └── page.config.ts
+    ├── media
+    │   ├── media.data.ts
+    │   ├── media.types.ts
+    │   └── seasons.data.ts
+    ├── middleware.ts
+    ├── store
+    │   ├── carousel.store.ts
+    │   ├── main-animation.ts
+    │   ├── store.ts
+    │   └── video-player.store.ts
+    └── utils
+    │   └── get-background-image.ts
+└── tsconfig.json
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
